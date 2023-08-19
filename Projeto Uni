@@ -1,0 +1,68 @@
+public class Usuario {
+    private String nome;
+    private String cpf;
+    private String telefone;
+
+    public Usuario(String nome, String cpf, String telefone) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+    }
+
+    // Métodos getters e setters
+}
+public class Carro {
+    private String modelo;
+    private String marca;
+    private double valorPorKm;
+
+    public Carro(String modelo, String marca, double valorPorKm) {
+        this.modelo = modelo;
+        this.marca = marca;
+        this.valorPorKm = valorPorKm;
+    }
+
+    // Métodos getters e setters
+}
+public class Aluguel {
+    private Usuario usuario;
+    private Carro carro;
+    private int quantidadeDias;
+    private int kmInicial;
+    private int kmFinal;
+    private double valorTotalAluguel;
+
+    public Aluguel(Usuario usuario, Carro carro) {
+        this.usuario = usuario;
+        this.carro = carro;
+    }
+
+    public void iniciarAluguel() {
+        // Implemente o método iniciarAluguel
+    }
+
+    public void fecharLocacao() {
+        // Implemente o método fecharLocacao
+    }
+
+    public String mostrarResumoLocacao() {
+        // Implemente o método mostrarResumoLocacao e retorne a string de resumo
+    }
+
+    // Métodos getters e setters
+}
+import javax.swing.JOptionPane;
+
+public class Main {
+    public static void main(String[] args) {
+        Usuario usuario = new Usuario("Rogério", "123.123.123-11", "(11)1111-11111");
+        Carro carro = new Carro("HB20", "Hyundai", 5.0);
+        Aluguel aluguel = new Aluguel(usuario, carro);
+
+        aluguel.iniciarAluguel();
+        aluguel.fecharLocacao();
+        String resumo = aluguel.mostrarResumoLocacao();
+
+        JOptionPane.showMessageDialog(null, "Resumo Aluguel\n" + resumo);
+    }
+}
